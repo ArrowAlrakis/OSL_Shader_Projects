@@ -20,7 +20,7 @@ The goal was to explore the power of OSL in generating procedural textures, anim
 
 - **Pixar RenderMan**
 - **Maya**
-- **Cutter** (for OSL shader writing and creating HTML local website for project demo and review)
+- **Cutter** (for OSL shader writing, create an HTML local website for project demo and review)
 - **Open Shading Language (OSL)**
 
 ## Learning Outcomes
@@ -29,3 +29,7 @@ The goal was to explore the power of OSL in generating procedural textures, anim
 - Gained experience translating math into visual output
 - Explored stylized shading approaches without textures
 - Practiced integrating shaders into Maya + RenderMan pipeline
+
+# Contact / Portfolio
+Email: jcrane@gmail.com
+GitHub: [[Arrow's profile]](https://github.com/ArrowAlrakis)
