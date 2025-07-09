@@ -1,0 +1,11 @@
+shader SEM_Edge(
+	color edgeRGB = color(1,1,1),
+	color faceRGB = color(0.639,0.627,0.156),
+	float gain = 3,
+	output color resultRGB = 0)
+{
+vector n = normalize(N);
+vector i = normalize(-I);
+float dp = 1 - fabs(dot(n,i));
+resultRGB = mix(faceRGB, edgeRGB, pow(dp,gain));
+}

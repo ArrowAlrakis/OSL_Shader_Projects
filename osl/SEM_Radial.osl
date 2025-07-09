@@ -1,0 +1,15 @@
+shader SEM_Radial(
+	color innerRGB = color(1,1,0),
+	color outerRGB = color(1,0,1),
+	float innerRad = 1.0,
+	float outerRad = 5.0,
+	string spacename = "world",
+	output color resultRGB = 0)
+{
+point p = transform(spacename, P);
+float d = distance(point(0,0,0), p);
+
+float blend = smoothstep(innerRad, outerRad, d);
+resultRGB = mix(innerRGB, outerRGB, blend);
+
+}

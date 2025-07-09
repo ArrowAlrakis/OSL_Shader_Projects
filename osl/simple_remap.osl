@@ -1,0 +1,9 @@
+shader simple_remap(
+    float input = 0,
+    float outMin = 0,
+    float outMax = 1,
+    output float resultF = 0)
+
+{
+ resultF = input * (outMax - outMin) + outMin;
+}

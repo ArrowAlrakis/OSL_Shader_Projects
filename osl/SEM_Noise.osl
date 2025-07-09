@@ -1,0 +1,41 @@
+shader SEM_Noise(
+    float freq = 8,
+    float amplitude = 1,
+    int   octaves = 3
+       [[
+       string label = "Details",
+       ]],
+    float height_clip = -1,
+    int clipping = 1 [[ string widget = "checkBox"]],
+    string spacename = "object",
+    output float resultF = 0)
+{
+ point p = transform(spacename, P);
+
+ int n;
+
+ float FREQ = freq;
+
+ float AMPL = amplitude;
+
+ for(n = 0; n < octaves; n++) {
+
+    resultF += noise("perlin", p * FREQ)/AMPL;
+
+    FREQ *= 2;
+
+    AMPL *= 2;
+
+    }
+
+ if(clipping > 0) {
+
+    resultF -= height_clip;
+
+    if(resultF < 0)
+
+      resultF = 0;
+
+    }
+
+}

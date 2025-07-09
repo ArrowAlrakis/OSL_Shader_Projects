@@ -1,0 +1,12 @@
+shader SEM_Direction(
+	color fakeLightRGB = color(1,1,1),
+	color baseRGB = color(0.639,0.627,0.156),
+	vector fackLightDirection = vector(0,-1,0),
+	string spacename = "world",
+	output color resultRGB = 0)
+{
+vector n = normalize(N);
+vector d = normalize(transform(spacename,fackLightDirection));
+float dp = 1 - clamp(dot(n,-d), 0, 1);
+resultRGB = mix(fakeLightRGB, baseRGB, dp);
+}

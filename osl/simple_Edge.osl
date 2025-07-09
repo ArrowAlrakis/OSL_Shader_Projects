@@ -1,0 +1,22 @@
+shader simple_Edge(
+    color base = 1,
+    color edge = color(1,0,0),
+    float strength = 1,
+    output color resultRGB = 0,
+    output float resultF = 0)
+{
+ vector n = normalize(N);
+
+ vector i = normalize(I);
+
+ float  d = 1 - abs(dot(n, -i));
+
+ 
+
+ d = pow(d, strength);
+
+ resultRGB = mix(base, edge, d);
+
+ resultF = d;
+
+}
