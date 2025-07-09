@@ -18,10 +18,10 @@ The goal was to explore the power of OSL in generating procedural textures, anim
 
 ## Tools Used
 
-- **Pixar RenderMan**
-- **Maya**
-- **Cutter** (for OSL shader writing, create an HTML local website for project demo and review)
-- **Open Shading Language (OSL)**
+- **Pixar RenderMan** – for high-quality rendering and shader evaluation
+- **Autodesk Maya** – for scene assembly, shader testing, and animation
+- **Cutter** – a custom local development tool used at SCAD, I use it to write an local HTML pages for project preview, demo, submission, and feedback
+- **Open Shading Language (OSL)** – for writing procedural shaders
 
 ## Learning Outcomes
 
@@ -30,6 +30,6 @@ The goal was to explore the power of OSL in generating procedural textures, anim
 - Explored stylized shading approaches without textures
 - Practiced integrating shaders into Maya + RenderMan pipeline
 
-# Contact / Portfolio
+## Contact / Portfolio
 Email: jcrane@gmail.com
 GitHub: [[Arrow's profile]](https://github.com/ArrowAlrakis)
