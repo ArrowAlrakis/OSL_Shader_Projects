@@ -23,7 +23,7 @@ The goal was to explore the power of OSL in generating procedural textures, anim
 - **Cutter** (for OSL shader writing and creating HTML local website for project demo and review)
 - **Open Shading Language (OSL)**
 
-- ## Learning Outcomes
+## Learning Outcomes
 
 - Developed custom procedural shaders using OSL
 - Gained experience translating math into visual output
