@@ -1,0 +1,71 @@
+shader
+helix
+(	float	pitch = 1
+		[[
+		string label = "Pitch",
+		]],
+	float	width = 0.5 
+		[[
+		string label = "Width",
+		]],
+	int		coordspace = 0 
+		[[
+		string label = "Coordinate Space",
+		string widget = "mapper",
+		string options = "object:0|world:1|camera:2|user defined:3",
+		]],
+	string  userspace = "place3dTexture1"
+		[[
+		string label = "User Defined",
+		]],
+	output float resultMask = 0)
+{
+float half_width = width/2;
+
+// Convert the shading point to a specific coordinate system.
+point p;
+if(coordspace == 0)
+	p = transform("object", P);
+else if(coordspace == 1)
+	p = transform("world", P);
+else if(coordspace == 2)
+	p = transform("camera", P);
+else
+	p = transform(userspace, P);
+	
+// Get the coordinates of the transformed shading point.
+float x = p[0];
+float y = p[1];
+float z = p[2];
+
+// Count the number of times the helix has looped around.
+float loops = floor( fabs(y) / pitch);
+//float loops = floor( y / pitch);
+
+// Calculate for the current loop the percentage rotation (theta)
+// the shading point.
+float theta = (atan2(x, z) + M_PI) / M_2PI;
+
+// To prevent a counter-rotation when the shading point is below
+// the origin of the coordinate system.
+if(y < 0)
+	theta = theta * -1.0;
+	
+// When the shading point is near to the bottom or the top of the
+// current loop we ensure the final test takes lower and top
+// loops into consideration. 
+float y_prev_loop = theta * pitch + (loops - 1) * pitch;
+float y_this_loop = theta * pitch + loops * pitch;
+float y_next_loop = theta * pitch + (loops + 1) * pitch;
+
+y = fabs(y);
+if( fabs(y - y_prev_loop) <= half_width ||
+	fabs(y - y_this_loop) <= half_width ||
+	fabs(y - y_next_loop) <= half_width) {
+	resultMask = 1;
+	}
+else
+	{
+	resultMask = 0;
+	}
+}

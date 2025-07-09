@@ -1,0 +1,7 @@
+shader uvColor(
+
+	output color resultRGB)
+	{
+	
+	
+	}

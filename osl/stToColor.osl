@@ -1,0 +1,17 @@
+shader
+stToColor(   
+	float s = 0 [[
+                string widget = "null",
+                int lockgeom = 0
+                ]],
+    float t = 0 [[
+                string widget = "null",
+                int lockgeom = 0
+                ]],
+    float blue = 0,
+    output color resultRGB = 0 
+			
+    )
+{
+resultRGB = color(1, 0, blue);
+}

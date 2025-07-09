@@ -1,0 +1,16 @@
+
+
+
+shader SimpleColor(
+		color inColor = 1,
+		float redness = 1,
+		float greenness = 1,
+		float blueness = 1,
+		output color resultRGB = 0) {
+	// Grab the color components of the input color
+	float r = inColor[0] * redness;
+	float g = inColor[1] * greenness;
+	float b = inColor[2] * blueness;
+	resultRGB = color(r,g,b);
+	}
+		

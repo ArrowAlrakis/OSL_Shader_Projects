@@ -1,0 +1,13 @@
+
+shader PhotoShopColor(
+	int red = 255   [[ int min = 0, int max = 255 ]],
+	int green = 255 [[ int min = 0, int max = 255 ]],
+	int blue = 255  [[ int min = 0, int max = 255 ]],
+	output color resultRGB = 0) {
+	
+	float r = ((float)red)/255;
+	float g = ((float)green)/255;
+	float b = ((float)blue)/255;
+	
+	resultRGB = color(r,g,b);
+	}
