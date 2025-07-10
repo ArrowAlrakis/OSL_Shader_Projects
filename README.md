@@ -17,7 +17,8 @@ The goal was to explore the power of OSL in generating procedural textures, anim
 - Preview renders and one demo animation
 
 ## OSL Files
-| `uvColor.osl`         | Outputs a linear gradient color based on the UV coordinate's U and V values. Useful for testing UV mapping or generating procedural gradients. |
+📄 [uvColor.osl](./osl/uvColor.osl) –  Outputs a linear gradient color based on the UV coordinate's U and V values. Useful for testing UV mapping or generating procedural gradients.
+
 | `uvToColor.osl`       | Converts UV coordinates into color by mapping them into RGB space. Helpful for debugging UV layouts or creating simple color patterns.         |
 | `uvToColorCircle.osl` | Generates a circular color gradient centered in UV space. Ideal for effects like procedural iris, halos, or radial masks.                      |
 | `uvToColorCross.osl`  | Outputs a cross pattern based on the UV coordinates. Can be used for stylized shading or texture alignment guides.                             |
