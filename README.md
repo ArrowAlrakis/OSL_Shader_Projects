@@ -6,8 +6,15 @@
 [Butterfly Texture Preview](./preview_butterfly.jpg)
 
 This is a collection of OSL shaders and stylized material studies created with Pixar's RenderMan during my coursework at SCAD, under the instruction of Professor Malcolm Kesson.
+These shaders are divided into utility, UV-based patterns, stylized effects, and SEM-inspired styles. They were developed to explore stylized shading, material experimentation, and motion-based surface changes. The goal was to explore the power of OSL in generating procedural textures, animated shaders, and unique visual effects for look development.
 
-The goal was to explore the power of OSL in generating procedural textures, animated shaders, and unique visual effects for look development.
+Two demo applications were created using these shaders:
+
+`osl_pattern.mb`- Animated Shader Demo: This demonstrates live changes in color and shape through time-driven OSL logic. Shows procedural animation entirely controlled by shader code (no mesh deformation).
+
+`butterfly_pattern.mb`- Butterfly SEM Texture Demo: This applies a stylized shading pipeline to mimic Scanning Electron Microscope (SEM) imagery. Simulates scientific, paper-cut, or insect-wing material styles using procedural noise and edge masks.
+
+
 
 ## File Overview
 
@@ -22,13 +29,15 @@ The goal was to explore the power of OSL in generating procedural textures, anim
 
 📄 [stToColor.osl](./osl/stToColor.osl) – Converts surface coordinates (s, t) parameters (UV) to RGB color, used as a basic test of parameter-space shading. 
 
+📄 [PhotoShopColor.osl](./osl/PhotoShopColor.osl) – Simulates layer blending modes or color transformations inspired by Photoshop (hue/saturation tweaks).
+
 📄 [uvToColorCircle.osl](./osl/uvToColorCircle.osl) – Generates a circular pattern based on UV coordinates, useful for stylized materials.
 
 📄 [uvToColorCross.osl](./osl/uvToColorCross.osl) – Generates a cross pattern based on UV coordinates, useful for stylized materials.
 
 📄 [uvToColorDonut.osl](./osl/uvToColorDonut.osl) – Generates a donut-shaped pattern based on UV coordinates, useful for stylized materials.
 
-📄 [SimpleColor.osl](./osl/SimpleColor.osl) – Outputs a single flat color. Useful as a base shader to test pipeline.
+📄 [SimpleColor.osl](./osl/SimpleColor.osl) – Outputs a single flat color. Useful as a base shader for testing.
 
 📄 [simple_remap.osl](./osl/simple_remap.osl) – Remaps input color or UV values from one range to another, good for fine-tuning gradients or intensity curves.
 
