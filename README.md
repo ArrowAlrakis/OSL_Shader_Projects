@@ -5,7 +5,6 @@
 
 [Butterfly Texture Preview](./preview_butterfly.jpg)
 
-
 This is a collection of OSL shaders and stylized material studies created with Pixar's RenderMan during my coursework at SCAD, under the instruction of Professor Malcolm Kesson.
 
 The goal was to explore the power of OSL in generating procedural textures, animated shaders, and unique visual effects for look development.
@@ -17,18 +16,33 @@ The goal was to explore the power of OSL in generating procedural textures, anim
 - Preview renders and one demo animation
 
 ## OSL Files
-📄 [uvColor.osl](./osl/uvColor.osl) –  Outputs a linear gradient color based on the UV coordinate's U and V values. Useful for testing UV mapping or generating procedural gradients.
+📄 [uvColor.osl](./osl/uvColor.osl) – Outputs the UV color as RGB, often used to visualize or debug UV layouts.
 
-| `uvToColor.osl`       | Converts UV coordinates into color by mapping them into RGB space. Helpful for debugging UV layouts or creating simple color patterns.         |
-| `uvToColorCircle.osl` | Generates a circular color gradient centered in UV space. Ideal for effects like procedural iris, halos, or radial masks.                      |
-| `uvToColorCross.osl`  | Outputs a cross pattern based on the UV coordinates. Can be used for stylized shading or texture alignment guides.                             |
-| `uvToColorDonut.osl`  | Creates a donut or ring-shaped pattern from UVs, suitable for procedural stylized looks or scientific material effects.                        |
-| `SimpleColor.osl`     | Outputs a solid color defined by the user. Simple starting point for custom shading or to isolate objects by color.                            |
-| `stToColor.osl`       | Similar to `uvColor.osl`, maps surface `s` and `t` parameters (UV) to RGB color. Used as a basic test of parameter-space shading.              |
-| `simple_remap.osl`    | Remaps a value from one range to another, typically used to adjust or compress UV or texture inputs. Useful in pipeline control.               |
-| `simple_Edge.osl`     | Generates edges or borders by detecting transitions in UV space, useful for creating outlines, masks, or cut-paper looks.                      |
+📄 [uvToColor.osl](./osl/uvToColor.osl) – Similar to uvColor, but mapped to HSV or circular hue shifts, color visualization based on UV.
 
+📄 [stToColor.osl](./osl/stToColor.osl) – Converts surface coordinates (s, t) parameters (UV) to RGB color, used as a basic test of parameter-space shading. 
 
+📄 [uvToColorCircle.osl](./osl/uvToColorCircle.osl) – Generates a circular pattern based on UV coordinates, useful for stylized materials.
+
+📄 [uvToColorCross.osl](./osl/uvToColorCross.osl) – Generates a cross pattern based on UV coordinates, useful for stylized materials.
+
+📄 [uvToColorDonut.osl](./osl/uvToColorDonut.osl) – Generates a donut-shaped pattern based on UV coordinates, useful for stylized materials.
+
+📄 [SimpleColor.osl](./osl/SimpleColor.osl) – Outputs a single flat color. Useful as a base shader to test pipeline.
+
+📄 [simple_remap.osl](./osl/simple_remap.osl) – Remaps input color or UV values from one range to another, good for fine-tuning gradients or intensity curves.
+
+📄 [simple_Edge.osl](./osl/simple_Edge.osl) – Adds soft edge detection based on UV or custom threshold. Can be used to fake outlines.
+
+📄 [helix.osl](./osl/helix.osl) – Generates a procedural helix shape, useful in animated shader effects or stylized overlays.
+
+📄 [SEM_Direction.osl](./osl/SEM_Direction.osl) –	Adds directional line patterns that simulate SEM-style shading or lighting.
+
+📄 [SEM_Edge.osl](./osl/SEM_Edge.osl) –	Creates an edge highlight effect for emphasizing structural boundaries in SEM renders.
+
+📄 [SEM_Noise.osl](./osl/SEM_Noise.osl) –	Applies subtle random noise to the surface, mimicking electronic grain or natural material roughness.
+
+📄 [SEM_Radial.osl](./osl/SEM_Radial.osl) –	Generates radial distortion or light-based concentric highlights, great for focusing viewer attention.
 
 ## Tools Used
 
