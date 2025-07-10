@@ -1,4 +1,4 @@
-# OSL_Shader_Projects
+# OSL_Shader_Project
 [OSL Pattern Demo](./osl_pattern_demo.mp4)
 
 [OSL Pattern Preview](./preview_osl_pattern.jpg) 
